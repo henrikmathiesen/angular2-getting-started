@@ -4,7 +4,9 @@
   "description": "A first look at Angular 2",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && typings install",
+    "postinstall": "typings install",
+    "prod": "set NODE_ENV=production && webpack",
+    "dev": "set NODE_ENV=development && webpack",
     "typings-search": "typings search",
     "typings-install": "typings install",
     "typings-install-core-js": "typings install --global --save dt~core-js",
