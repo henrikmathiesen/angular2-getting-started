@@ -8,6 +8,7 @@
     "typings-search": "typings search",
     "typings-install": "typings install",
     "dev": "webpack",
+    "serve": "http-server --p 1337",
     "prod": "cross-env NODE_ENV=production webpack",
     "reset-dev": "cross-env NODE_ENV=debug webpack"
   },
@@ -36,6 +37,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.9",
     "cross-env": "^1.0.8",
+    "http-server": "^0.9.0",
     "ts-loader": "0.8.2",
     "typescript": "1.8.10",
     "typings": "1.3.1",
