@@ -4,7 +4,7 @@
   "description": "A first look at Angular 2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && typings install",
     "typings-search": "typings search",
     "typings-install": "typings install",
     "typings-install-core-js": "typings install --global --save dt~core-js",
@@ -33,7 +33,9 @@
     "zone.js": "0.6.12"
   },
   "devDependencies": {
+    "ts-loader": "0.8.2",
     "typescript": "1.8.10",
-    "typings": "1.3.1"
+    "typings": "1.3.1",
+    "webpack": "1.13.1"
   }
 }
