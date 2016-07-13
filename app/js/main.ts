@@ -4,6 +4,6 @@ import 'zone.js/dist/zone';
 
 import { bootstrap } from '@angular/platform-browser-dynamic';
 
-import { GsAppComponent } from './gs-app.component';
+import { AppComponent } from './app.component';
 
-bootstrap(GsAppComponent);
+bootstrap(AppComponent);
