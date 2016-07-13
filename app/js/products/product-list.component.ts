@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 import { IProduct } from './product';
 
+declare var require: any;
+
 @Component({
     selector: 'gs-products',
-    templateUrl: 'app/js/products/product-list.component.html'
+    template: require("./product-list.component.html"),
+    styleUrls: ['bld/products/product-list.component.css']
 })
 export class ProductListComponent {
     pageTitle: string = "Product List";

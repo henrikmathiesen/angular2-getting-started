@@ -53,6 +53,13 @@ module.exports = {
                 include: [
                     path.resolve(__dirname, 'app/js')
                 ],
+            },
+            {
+                test: /\.html$/,
+                loader: 'html',
+                include: [
+                    path.resolve(__dirname, 'app/js')
+                ],
             }
         ]
     },

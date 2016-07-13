@@ -18,6 +18,7 @@ var isProduction = (argv.prod) ? (true) : (false);
 
 var lessSrc = './app/less/app.less';
 var lessSrcWatch = './app/less/**/*.less';
+var lessComponentsSrc = './app/js/**/*.less';
 
 var bldFolder = './bld';
 
@@ -38,11 +39,21 @@ gulp.task('less', function () {
         .pipe(gulp.dest(bldFolder));
 });
 
+gulp.task('less-components', function(){
+    return gulp
+        .src(lessComponentsSrc)
+        .pipe(less())
+        .pipe(autoprefix({ browsers: ['last 3 versions'] }))
+        .pipe(gulpif(isProduction, minifyCss()))
+        .pipe(gulp.dest(bldFolder));
+});
+
 //
 // Main Tasks
 
-gulp.task('default', ['less'],  function(){});
+gulp.task('default', ['less', 'less-components'],  function(){});
 
 gulp.task('watch', ['default'], function () {
     gulp.watch(lessSrcWatch, ['less']);
+    gulp.watch(lessComponentsSrc, ['less-components']);
 });

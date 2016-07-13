@@ -1,0 +1,15 @@
+@lib-base-url: '../../../node_modules';
+
+@import '@{lib-base-url}/bootstrap/less/variables.less';
+@import "@{lib-base-url}/bootswatch/yeti/variables.less";
+
+// Override vendor variables and app settings
+@import '../../less/gs-settings.less';
+
+.table {
+    tbody {
+        tr:nth-child(odd) {
+            background-color: cornsilk;
+        }
+    }
+}
