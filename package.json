@@ -7,9 +7,10 @@
     "postinstall": "typings install",
     "typings-search": "typings search",
     "typings-install": "typings install",
-    "serve": "http-server --p 1337",
+    "start": "concurrently \"npm run webpack\" \"npm run gulp\" \"npm run serve\" ",
     "webpack": "webpack",
     "gulp": "gulp watch",
+    "serve": "http-server --p 1337",
     "prod": "cross-env NODE_ENV=production webpack && gulp --prod",
     "reset-dev": "cross-env NODE_ENV=debug webpack"
   },
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.9",
+    "concurrently": "^2.2.0",
     "cross-env": "^1.0.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
