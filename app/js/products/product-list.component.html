@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products">
+                    <tr *ngFor="let product of products | productFilter:listFilter">
                         <!-- [hidden]="!showImage" , could also be used, but then request for all images is made on first load -->
                         <td>
                             <img *ngIf="showImage" 

@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 import { IProduct } from './product';
+import { ProductFilterPipe } from './product-filter.pipe';
 
 declare var require: any;
 
 @Component({
     selector: 'gs-products',
     template: require("./product-list.component.html"),
-    styleUrls: ['bld/products/product-list.component.css']
+    styleUrls: ['bld/products/product-list.component.css'],
+    pipes: [ProductFilterPipe]
 })
 export class ProductListComponent implements OnInit {
     pageTitle: string = "Product List";
     showImage: boolean = false;
-    listFilter: string = "cart";
+    listFilter: string = "";
     products: IProduct[] = [
         {
             "productId": 1,
