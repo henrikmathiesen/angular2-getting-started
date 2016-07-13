@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { IProduct } from './product';
 
@@ -9,7 +9,7 @@ declare var require: any;
     template: require("./product-list.component.html"),
     styleUrls: ['bld/products/product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
     pageTitle: string = "Product List";
     showImage: boolean = false;
     listFilter: string = "cart";
@@ -66,7 +66,11 @@ export class ProductListComponent {
         }
     ];
 
-    toggleImage(){
+    ngOnInit(): void {
+        console.log("ngOnInit");
+    }
+
+    toggleImage() {
         this.showImage = !this.showImage;
     }
 }
