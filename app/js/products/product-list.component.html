@@ -45,7 +45,9 @@
                         <td>{{ product.productCode | lowercase }}</td>
                         <td>{{ product.releaseDate }}</td>
                         <td>{{ product.price | currency: 'USD':true:'1.2-2' | lowercase }}</td>
-                        <td>{{ product.starRating }}</td>
+                        <td>
+                            <gs-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></gs-star>
+                        </td>
                     </tr>
                 </tbody>
             </table>
