@@ -12,7 +12,7 @@ const PAGE_TITLE: string = "Product List";
 @Component({
     selector: 'gs-products',
     template: require('./product-list.component.html'),
-    styles: [require('./product-list.component.css').toString()],
+    styles: [require('./product-list.component.less').toString()],
     directives: [StarComponent],
     pipes: [ProductFilterPipe],
 })

@@ -5,7 +5,7 @@ declare var require: any;
 @Component({
     selector: 'gs-star',
     template: require("./star.component.html"),
-    styles: [require('./star.component.css').toString()]
+    styles: [require('./star.component.less').toString()]
 })
 export class StarComponent {
     @Input() rating: number;
