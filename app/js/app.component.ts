@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ProductListComponent } from './products/product-list.component';
+import { ProductService } from './products/product.service';
 
 @Component({
     selector: 'gs-app',
@@ -19,7 +20,8 @@ import { ProductListComponent } from './products/product-list.component';
             </div>
         </div>
     `,
-    directives: [ProductListComponent]
+    directives: [ProductListComponent],
+    providers: [ProductService] // this instance is shared down the app
 })
 export class AppComponent {
     pageTitle: string = "My Angular 2 App";
