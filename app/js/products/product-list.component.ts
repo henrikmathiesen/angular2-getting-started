@@ -11,8 +11,8 @@ const PAGE_TITLE: string = "Product List";
 
 @Component({
     selector: 'gs-products',
-    template: require("./product-list.component.html"),
-    styleUrls: ['bld/products/product-list.component.css'],
+    template: require('./product-list.component.html'),
+    styles: [require('./product-list.component.css').toString()],
     directives: [StarComponent],
     pipes: [ProductFilterPipe],
 })

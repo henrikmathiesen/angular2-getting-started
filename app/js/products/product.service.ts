@@ -32,7 +32,7 @@ export class ProductService {
                 "productCode": "TBX-0048",
                 "releaseDate": "May 21, 2016",
                 "description": "Curved claw steel hammer",
-                "price": 8.9,
+                "price": 8.1,
                 "starRating": 4.8,
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
             },

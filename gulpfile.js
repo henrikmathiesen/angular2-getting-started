@@ -45,7 +45,7 @@ gulp.task('less-components', function(){
         .pipe(less())
         .pipe(autoprefix({ browsers: ['last 3 versions'] }))
         .pipe(gulpif(isProduction, minifyCss()))
-        .pipe(gulp.dest(bldFolder));
+        .pipe(gulp.dest('./app/js'));
 });
 
 //
