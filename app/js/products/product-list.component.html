@@ -42,7 +42,8 @@
                             <img *ngIf="showImage" 
                                 [src]="product.imageUrl"
                                 [title]="product.productName | uppercase"
-                                [style.width.px]="50">
+                                [style.width.px]="50"
+                                (click)="navigateToDetail(product)" >
                         </td>
                         <td>
                             <a [routerLink]="['product', product.productId]">{{ product.productName }}</a>

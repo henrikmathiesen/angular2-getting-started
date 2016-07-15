@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router'; // need ROUTER_DIRECTIVES to use directive links, need Router to navigate programatically
 
 import { IProduct } from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
     products: IProduct[];
     errorMessage: string;
 
-    constructor(private _productService: ProductService) {
+    constructor(private _productService: ProductService, private _router: Router) {
 
     }
 
@@ -41,5 +41,9 @@ export class ProductListComponent implements OnInit {
 
     onRatingClicked(message): void {
         this.pageTitle = PAGE_TITLE + " " + message;
+    }
+
+    navigateToDetail(product: IProduct) {
+        this._router.navigate(['product', product.productId]);
     }
 }
