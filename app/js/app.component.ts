@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
+import { HTTP_PROVIDERS } from '@angular/http'; // Need to import HTTP_PROVIDERS, to be able to use it services throughout the app, such as Http, Response
 import 'rxjs/Rx'; // Load the library but dont import anything - we can then use the operators like .map
 
 import { ProductListComponent } from './products/product-list.component';
