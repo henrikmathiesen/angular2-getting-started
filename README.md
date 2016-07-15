@@ -9,6 +9,6 @@ But we will use Webpack, instead of SystemJS for module loading, and other build
 
 https://www.youtube.com/playlist?list=PLgGUMhSgtxJyIQ4vI3BzlCzZLHL79Ew6p
 
-Also using less, compiled with Gulp. Would have liked to compile less with Webpack, but another day ...
+Also using less, compiled with Gulp. But! Also compiles less with Webpack, and require the less file from components.
 All npm packages are installed localy and run via npm scripts.
 Bower is not used, instead all packages are downloaded via npm.
