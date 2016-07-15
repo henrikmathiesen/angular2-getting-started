@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { IProduct } from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
@@ -10,10 +11,9 @@ declare var require: any;
 const PAGE_TITLE: string = "Product List";
 
 @Component({
-    selector: 'gs-products',
     template: require('./product-list.component.html'),
     styles: [require('./product-list.component.less').toString()],
-    directives: [StarComponent],
+    directives: [StarComponent, ROUTER_DIRECTIVES],
     pipes: [ProductFilterPipe],
 })
 export class ProductListComponent implements OnInit {

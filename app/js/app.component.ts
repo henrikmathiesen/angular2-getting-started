@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http'; // Need to import HTTP_PROVIDERS, to be able to use it services throughout the app, such as Http, Response
-import 'rxjs/Rx'; // Load the library but dont import anything - we can then use the operators like .map
+import { HTTP_PROVIDERS } from '@angular/http';         // Need to import HTTP_PROVIDERS, to be able to use it services throughout the app, such as Http, Response
+import 'rxjs/Rx';                                       // Load the library but dont import anything - we can then use the operators like .map
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
@@ -10,7 +11,13 @@ import { ProductService } from './products/product.service';
     template: `
         <div>
             <h2>{{ pageTitle }}</h2>
-            <gs-products></gs-products>
+            <hr />
+            <nav>
+                <a [routerLink]="['']">Products</a>
+                <a [routerLink]="['/product']">Product</a>
+            </nav>
+            <hr />
+            <router-outlet></router-outlet>
             <div>
                 <button class="btn btn-success">Success</button>
             </div>
@@ -22,7 +29,7 @@ import { ProductService } from './products/product.service';
             </div>
         </div>
     `,
-    directives: [ProductListComponent],
+    directives: [ROUTER_DIRECTIVES],
     providers: [ProductService, HTTP_PROVIDERS] // these instances is shared down the app
 })
 export class AppComponent {
