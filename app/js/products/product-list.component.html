@@ -16,6 +16,9 @@
                 <h3>Filtered by: {{ listFilter }} </h3>
             </div>
         </div>
+        <div class="alert alert-dismissible alert-danger" *ngIf="errorMessage">
+            <h2>{{ errorMessage }}</h2>
+        </div>
         <div class="table-responsive">
             <table class="table" *ngIf="products && products.length">
                 <thead>

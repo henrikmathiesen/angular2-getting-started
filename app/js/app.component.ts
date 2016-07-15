@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
+import 'rxjs/Rx'; // Load the library but dont import anything - we can then use the operators like .map
 
 import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
@@ -21,7 +23,7 @@ import { ProductService } from './products/product.service';
         </div>
     `,
     directives: [ProductListComponent],
-    providers: [ProductService] // this instance is shared down the app
+    providers: [ProductService, HTTP_PROVIDERS] // these instances is shared down the app
 })
 export class AppComponent {
     pageTitle: string = "My Angular 2 App";
