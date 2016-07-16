@@ -7,8 +7,6 @@ import { StarComponent } from '../shared/star.component';
 import { ProductService } from './product.service';
 import { SomeLoops } from '../shared/some-loops';
 
-declare var require: any;
-
 const PAGE_TITLE: string = "Product List";
 
 @Component({
@@ -23,10 +21,6 @@ export class ProductListComponent implements OnInit {
     listFilter: string = "";
     products: IProduct[];
     errorMessage: string;
-
-
-
-
 
     constructor(private _productService: ProductService, private _router: Router) {
 

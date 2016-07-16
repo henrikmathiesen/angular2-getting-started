@@ -1,7 +1,5 @@
 import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
-declare var require: any;
-
 @Component({
     selector: 'gs-star',
     template: require("./star.component.html"),

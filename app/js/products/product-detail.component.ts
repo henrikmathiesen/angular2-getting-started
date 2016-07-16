@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-declare var require: any;
-
 @Component({
     template: require('./product-detail.component.html')
 })
