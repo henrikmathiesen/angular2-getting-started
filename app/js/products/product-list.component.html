@@ -8,7 +8,7 @@
                 Filter by:
             </div>
             <div class="col-md-4">
-                <input class="form-control" type="text" [(ngModel)]="listFilter" />
+                <input class="form-control" type="text" [(ngModel)]="listFilter" (keyup.enter)="listFilter = 'key enter'" />
             </div>
         </div>
         <div class="row">
