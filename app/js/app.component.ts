@@ -30,7 +30,8 @@ import { ProductService } from './products/product.service';
         </div>
     `,
     directives: [ROUTER_DIRECTIVES],
-    providers: [ProductService, HTTP_PROVIDERS] // these instances is shared down the app
+    // these instances is shared down the app, a providers array further bellow that requires one of these will provide a new instance
+    providers: [ProductService, HTTP_PROVIDERS]
 })
 export class AppComponent {
     pageTitle: string = "My Angular 2 App";
