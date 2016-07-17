@@ -1,7 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { ProductListComponent } from './products/product-list.component';
-import { ProductDetailComponent } from './products/product-detail.component';
+import { ProductDetailComponent, ProductListComponent } from './products';
 
 const routes: RouterConfig = [
     { 

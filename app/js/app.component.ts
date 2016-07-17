@@ -3,7 +3,6 @@ import { HTTP_PROVIDERS } from '@angular/http';         // We import HTTP_PROVID
 import 'rxjs/Rx';                                       // Load the library but dont import anything - we can then use the operators like .map
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
 
 @Component({
