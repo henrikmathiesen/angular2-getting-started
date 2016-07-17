@@ -7,7 +7,7 @@ import { IProduct } from './product';
 
 @Injectable()
 export class ProductService {
-    private _productUrl = '/api/products.json';
+    private _productUrl = '/api/productsToo.json';
 
     constructor(private _http: Http) {
 
@@ -15,7 +15,7 @@ export class ProductService {
 
     getProducts(): Observable<IProduct[]> {
         return this._http.get(this._productUrl)
-            .map((response: Response) => <IProduct[]>response.json())
+            .map((response: Response) => <IProduct[]>response.json().data)
             .do((data: any) => console.log(data)) // can peak at the data in the do() method
             .catch(this.handleError)
     }
@@ -23,6 +23,5 @@ export class ProductService {
     private handleError(error: Response) {
         console.error(error);
         return Observable.throw(`Server Error: ${error.status}, ${error.statusText}. Call Batman!`);
-        
     }
 }

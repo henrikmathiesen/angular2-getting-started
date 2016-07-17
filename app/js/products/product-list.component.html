@@ -36,6 +36,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- 
+                        If products was assigned the Observable of this._productService.getProducts()
+                        without the subscribe as we do now, then we could use | async in the *ngFor and it would work
+                     -->
                     <tr *ngFor="let product of products | productFilter:listFilter">
                         <!-- [hidden]="!showImage" , could also be used, but then request for all images is made on first load -->
                         <td>

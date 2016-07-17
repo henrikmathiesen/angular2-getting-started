@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';         // Need to import HTTP_PROVIDERS, to be able to use it services throughout the app, such as Http, Response
+import { HTTP_PROVIDERS } from '@angular/http';         // We import HTTP_PROVIDERS (an array of services), as convinience we can then use services like Http and response throughout our app
 import 'rxjs/Rx';                                       // Load the library but dont import anything - we can then use the operators like .map
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
