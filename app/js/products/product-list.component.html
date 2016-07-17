@@ -37,7 +37,7 @@
                 </thead>
                 <tbody>
                     <!-- 
-                        If products was assigned the Observable of this._productService.getProducts()
+                        If products was assigned the Observable of this._productService.getProducts() (or indeed a promise works also)
                         without the subscribe as we do now, then we could use | async in the *ngFor and it would work
                      -->
                     <tr *ngFor="let product of products | productFilter:listFilter">

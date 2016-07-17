@@ -27,11 +27,27 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this._productService.getProducts()
-            .subscribe(
-            (products) => this.products = products,
-            (error) => this.errorMessage = error
-            );
+
+        // Mr Bell preferes doing Observables in the service, returning a promise and consume the promise here (_productService.getProductsPromise()) 
+
+        // this._productService.getProducts()
+        //     .subscribe(
+        //     (products) => this.products = products,
+        //     (error) => this.errorMessage = error
+        //     );
+
+        // this._productService.getProductsPromise()
+        //     .then(
+        //         (products) => this.products = products,
+        //         (error) => this.errorMessage = error 
+        //     );
+
+        // It is best to catch here also (as well as in the service) it will then catch error INSIDE the success callback
+        // An errorCallback like in the example above will NOT run if an error happens INSIDE the success callback
+        // http://odetocode.com/blogs/scott/archive/2015/10/01/javascript-promises-and-error-handling.aspx
+        this._productService.getProductsPromise()
+            .then((products) => this.products = products)
+            .catch((error) => this.errorMessage = error)
 
         SomeLoops.runThreeDifferentLoops();
     }
