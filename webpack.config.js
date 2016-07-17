@@ -9,7 +9,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'app/js/main.ts'),
     output: {
         path: path.resolve(__dirname, 'bld'),
-        filename: 'app.bundle.js'
+        filename: 'app.js'
     },
     devtool: isDebug ? "sourcemap" : null,
 
