@@ -11,7 +11,7 @@
     "gulp": "gulp watch",
     "webpack": "webpack",
     "serve": "http-server --p 1337",
-    "prod": "gulp --prod && cross-env NODE_ENV=production webpack"
+    "prod": "gulp --prod && cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",

@@ -23,6 +23,7 @@ module.exports = {
             dry: false
         }),
 
+        // sending in -p to webpack (see package.json), does some minification, but this does more
         new webpack.optimize.UglifyJsPlugin({
             sourcemap: false,
             compress: {
