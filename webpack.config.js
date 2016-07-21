@@ -36,6 +36,8 @@ module.exports = {
                 dry: false
             }),
 
+            new webpack.optimize.DedupePlugin(),
+
             // sending in -p to webpack (see package.json), does some minification, but this does more
             new webpack.optimize.UglifyJsPlugin({
                 sourcemap: false,
@@ -78,6 +80,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
+                // sending in -p to webpack (see package.json), does css minification, but we do it here as well, maybe unnecessary?
                 loader: isDebug ? 'css!postcss!less' : 'css?minimize!postcss!less',
                 include: [
                     path.resolve(__dirname, 'app/js')
