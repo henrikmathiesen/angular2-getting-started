@@ -27,6 +27,9 @@ module.exports = {
     devtool: isDebug ? "sourcemap" : null,
 
     plugins: isDebug ? [] : [
+            // This is so react understands not to run dev code: 
+            // http://stackoverflow.com/questions/22118915/how-to-turn-on-off-reactjs-development-mode/36285479#36285479
+            // But do we need this plugin AND the -p parameter (see package.json)? 
             new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }),
 
             // clean map files when build for production
