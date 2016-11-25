@@ -7,5 +7,5 @@ export interface IProduct {
     price: number;
     starRating: number;
     imageUrl: string;
-    readonly x: number;
+    readonly x: number; // testing TypeScript 2 feature readonly, with tsc compiler 2+ in package.json and VS Code instructed to intepret with that version (by setting.json in .vscode folder)
 }
