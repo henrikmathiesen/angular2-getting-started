@@ -1,4 +1,4 @@
-# angular2GettingStarted
+# angular 2 Getting Started
 A first look at Angular 2
 
 Following along:
